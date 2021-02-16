@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:topcoder/components/logo.dart';
 import 'package:topcoder/theme/style.dart';
 
@@ -72,21 +71,7 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Opacity(
                   opacity: 1,
                   child: Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Logo(),
-                        SizedBox(height: 16),
-                        Text(
-                          "TOPCODER",
-                          style: GoogleFonts.barlowCondensed(
-                            color: AppTheme.white,
-                            fontSize: 32.0,
-                          ),
-                        ),
-                      ],
-                    ),
+                    child: Logo(showText: true,),
                   ),
                 ),
               ),
