@@ -52,7 +52,7 @@ class AppTheme {
 
   static const AppBarTheme appBarTheme = AppBarTheme(
     brightness: Brightness.dark,
-    color: darkGreen,
+    color: dark,
     actionsIconTheme: IconThemeData(
       color: white,
     ),
