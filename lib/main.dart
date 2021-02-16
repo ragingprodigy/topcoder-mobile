@@ -3,6 +3,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:topcoder/constants.dart';
+import 'package:topcoder/routes.dart';
 import 'package:topcoder/theme/style.dart';
 
 void main() {
@@ -41,8 +42,8 @@ class TopCoder extends StatelessWidget {
         appBarTheme: AppTheme.appBarTheme,
         scaffoldBackgroundColor: AppTheme.primaryGreen,
       ),
-      // initialRoute: kDefaultRoute,
-      // onGenerateRoute: kGenerateRoutes,
+      initialRoute: kDefaultRoute,
+      onGenerateRoute: kGenerateRoutes,
     );
   }
 }
