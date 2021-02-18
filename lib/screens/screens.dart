@@ -1,1 +1,2 @@
-export "./splashscreen/splashscreen.dart";
+export "./challenges/index.dart";
+export "./splashscreen/splashScreen.dart";

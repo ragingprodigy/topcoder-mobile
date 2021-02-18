@@ -6,6 +6,7 @@ typedef MaterialPageRoute GenerateRoutes(RouteSettings settings);
 MaterialPageRoute kGenerateRoutes(RouteSettings settings) {
   Map<String, WidgetBuilder> kAppRoutes = {
     SplashScreen.id: (context) => SplashScreen(),
+    ChallengesScreen.id: (context) => ChallengesScreen(),
   };
 
   WidgetBuilder builder = kAppRoutes[settings.name];

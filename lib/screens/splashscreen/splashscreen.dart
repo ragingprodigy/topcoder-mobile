@@ -1,6 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:topcoder/components/logo.dart';
+import 'package:topcoder/screens/challenges/index.dart';
 import 'package:topcoder/theme/style.dart';
+import 'package:topcoder/utils/uiHelpers.dart';
 
 class SplashScreen extends StatefulWidget {
   static const String id = 'splash_screen';
@@ -19,13 +23,20 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
+  @override
+    void initState() {
+      super.initState();
+
+      Timer(Duration(seconds: 5), _toChallengeScreen);
+    }
+
   // _toHomeScreen() {
   //   replaceWith(context, HomeScreen.id);
   // }
 
-  // _toLoginScreen() {
-  //   replaceWith(context, LoginScreen.id);
-  // }
+  _toChallengeScreen() {
+    replaceWith(context, ChallengesScreen.id);
+  }
 
   // _authStateListener(BuildContext context, AuthState state) {
   //   if (state is Authenticated) {
