@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static const MaterialColor primaryPalette = MaterialColor(_mainPrimary, <int, Color>{
+  static const MaterialColor primaryPalette =
+      MaterialColor(_mainPrimary, <int, Color>{
     50: Color(0xFFE5E5E6),
     100: Color(0xFFBFBFBF),
     200: Color(0xFF959595),
@@ -17,7 +18,8 @@ class AppTheme {
   });
   static const int _mainPrimary = 0xFF2A2A2B;
 
-  static const MaterialColor accentPalette = MaterialColor(_mainAccent, <int, Color>{
+  static const MaterialColor accentPalette =
+      MaterialColor(_mainAccent, <int, Color>{
     100: Color(0xFF6767F0),
     200: Color(_mainAccent),
     400: Color(0xFF0000F1),
@@ -38,7 +40,7 @@ class AppTheme {
   static const Color primaryAmber = Color(0xFFFFCC01);
 
   static const Color iconGrey = Color(0xFFBBC5D2);
-  static const Color background = white;
+  static const Color background = Color(0xFFebebeb);
 
   static const Color textColor = Color(0xFF151516);
   static const Color mutedText = Color(0xFF737380);
@@ -65,77 +67,6 @@ class AppTheme {
         fontSize: 20.0,
       ),
     ),
-  );
-
-  static const TextTheme textTheme = TextTheme(
-    headline4: display1,
-    headline5: headline,
-    headline6: title,
-    subtitle2: subtitle,
-    bodyText1: body2,
-    bodyText2: body1,
-    caption: caption,
-  );
-
-  static const TextStyle display1 = TextStyle(
-    // h4 -> display1
-    fontFamily: headerFontName,
-    fontWeight: FontWeight.bold,
-    fontSize: 36,
-    letterSpacing: 0.4,
-    height: 0.9,
-    color: textWhite,
-  );
-
-  static const TextStyle headline = TextStyle(
-    // h5 -> headline
-    fontFamily: headerFontName,
-    fontWeight: FontWeight.bold,
-    fontSize: 24,
-    letterSpacing: 0.27,
-    color: textWhite,
-  );
-
-  static const TextStyle title = TextStyle(
-    // h6 -> title
-    fontFamily: fontName,
-    fontWeight: FontWeight.bold,
-    fontSize: 16,
-    letterSpacing: 0.18,
-    color: textWhite,
-  );
-
-  static const TextStyle subtitle = TextStyle(
-    // subtitle2 -> subtitle
-    fontFamily: fontName,
-    fontWeight: FontWeight.w400,
-    fontSize: 14,
-    letterSpacing: -0.04,
-    color: textColor,
-  );
-
-  static const TextStyle body2 = TextStyle(
-    // body1 -> body2
-    fontFamily: fontName,
-    fontWeight: FontWeight.w400,
-    fontSize: 13,
-    color: white,
-  );
-
-  static const TextStyle body1 = TextStyle(
-    // body2 -> body1
-    fontFamily: fontName,
-    fontWeight: FontWeight.w400,
-    fontSize: 16,
-    color: textColor,
-  );
-
-  static const TextStyle caption = TextStyle(
-    // Caption -> caption
-    fontFamily: fontName,
-    fontWeight: FontWeight.w400,
-    fontSize: 12,
-    color: textWhite, // was lightText
   );
 
   static const BorderRadius hatchBackRadius = BorderRadius.only(

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:preview/preview.dart';
 import 'package:topcoder/components/logo.dart';
 import 'package:topcoder/screens/challenges/index.dart';
 import 'package:topcoder/theme/style.dart';
@@ -24,11 +25,11 @@ class _SplashScreenState extends State<SplashScreen>
   }
 
   @override
-    void initState() {
-      super.initState();
+  void initState() {
+    super.initState();
 
-      Timer(Duration(seconds: 5), _toChallengeScreen);
-    }
+    Timer(Duration(seconds: 5), _toChallengeScreen);
+  }
 
   // _toHomeScreen() {
   //   replaceWith(context, HomeScreen.id);
@@ -82,7 +83,9 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Opacity(
                   opacity: 1,
                   child: Center(
-                    child: Logo(showText: true,),
+                    child: Logo(
+                      showText: true,
+                    ),
                   ),
                 ),
               ),
@@ -91,7 +94,9 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Center(
                   child: Text(
                     'Copyright ©${DateTime.now().year}',
-                    style: AppTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText1.copyWith(
+                          color: AppTheme.white,
+                        ),
                   ),
                 ),
               ),
@@ -100,5 +105,18 @@ class _SplashScreenState extends State<SplashScreen>
         ),
       ),
     );
+  }
+}
+
+class WidgetPreview extends PreviewProvider {
+  @override
+  List<Preview> get previews {
+    return [
+      Preview(
+        frame: Frames.androidAuto,
+        mode: UpdateMode.hotReload,
+        child: SplashScreen(),
+      ),
+    ];
   }
 }

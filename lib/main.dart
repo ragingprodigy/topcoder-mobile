@@ -2,6 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:topcoder/constants.dart';
 import 'package:topcoder/routes.dart';
 import 'package:topcoder/theme/style.dart';
@@ -24,7 +25,7 @@ class TopCoder extends StatelessWidget {
         statusBarIconBrightness: Brightness.light,
         statusBarBrightness:
             Platform.isAndroid ? Brightness.dark : Brightness.light,
-        systemNavigationBarColor: AppTheme.white,
+        systemNavigationBarColor: AppTheme.background,
         systemNavigationBarDividerColor: Colors.grey,
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
@@ -37,10 +38,10 @@ class TopCoder extends StatelessWidget {
         primaryColor: AppTheme.primaryGreen,
         primaryColorLight: AppTheme.lightGreen,
         primaryColorDark: AppTheme.darkGreen,
-        textTheme: AppTheme.textTheme,
+        textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
         fontFamily: AppTheme.fontName,
         appBarTheme: AppTheme.appBarTheme,
-        scaffoldBackgroundColor: AppTheme.primaryGreen,
+        scaffoldBackgroundColor: AppTheme.background,
       ),
       initialRoute: kDefaultRoute,
       onGenerateRoute: kGenerateRoutes,
